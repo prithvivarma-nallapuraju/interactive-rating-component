@@ -5,7 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./CSS/style.css" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Interactive Rating Component</title>
   </head>
-  <body class="bg-blue-900"></body>
+  <body class="bg-black">
+    <!-- Interactive Rating Component Design Starts -->
+    <section
+      id="rating-component"
+      class="bg-veryDarkBlueCustom w-96 mx-auto rounded-3xl my-56 shadow-[15px_15px_15px_15px_darkBlueCustom]"
+    >
+      <div class="container flex flex-col">
+        <!--star design -->
+        <div class="container mx-4 my-4 p-4">
+          <div class="absolute bg-darkBlueCustom rounded-full p-4">
+            <img src="./images/icon-star.svg" alt="star-icon" class="h-5 w-5" />
+          </div>
+        </div>
+        <!-- End of Star design -->
+
+        <!-- Text decoration -->
+        <div class="mx-4 mt-8">
+          <h1 class="text-white font-light font-overPass text-xl">
+            How did we go?
+          </h1>
+          <p class="text-lightGrayCustom text-sm my-3">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us imporve our offering.
+          </p>
+          <!--Rating Values -->
+          <div class="flex flex-row my-8 justify-evenly -mx-4">
+            <input
+              type="button"
+              value="1"
+              id="btn-1"
+              onclick="changeColor('btn-1')"
+              class="px-5 py-3 rounded-full bg-darkBlueCustom text-white text-sm hover:bg-lightGrayCustom hover:cursor-pointer"
+            />
+            <input
+              type="button"
+              value="2"
+              id="btn-2"
+              onclick="changeColor('btn-2')"
+              class="px-5 py-3 rounded-full bg-darkBlueCustom text-white text-sm hover:bg-lightGrayCustom hover:cursor-pointer"
+            />
+
+            <input
+              type="button"
+              value="3"
+              id="btn-3"
+              onclick="changeColor('btn-3')"
+              class="px-5 py-3 rounded-full bg-darkBlueCustom text-white text-sm hover:bg-mediumGrayCustom hover:cursor-pointer"
+            />
+            <input
+              type="button"
+              value="4"
+              id="btn-4"
+              onclick="changeColor('btn-4')"
+              class="px-5 py-3 rounded-full bg-darkBlueCustom text-white text-sm hover:bg-mediumGrayCustom hover:cursor-pointer"
+            />
+            <input
+              type="button"
+              value="5"
+              id="btn-5"
+              class="px-5 py-3 rounded-full bg-darkBlueCustom text-white text-sm hover:bg-mediumGrayCustom hover:cursor-pointer"
+              onclick="changeColor('btn-5')"
+            />
+          </div>
+          <!--End of Rating Values -->
+          <!--Button -->
+          <a
+            href="#"
+            class="bg-orangeCustom rounded-full text-center py-3 px-36 text-white font-overPass hover:bg-white hover:text-orangeCustom"
+            id="dummy-class"
+          >
+            Submit</a
+          >
+          <!--End of Button -->
+        </div>
+        <!-- End of Text decoration -->
+      </div>
+    </section>
+    <!-- End of Interactive Rating Component-->
+
+    <section
+      id="rating-component-1"
+      class="hidden bg-veryDarkBlueCustom w-96 mx-auto rounded-3xl my-56 shadow-[15px_15px_15px_15px_darkBlueCustom] text-center"
+    >
+      <div class="mx-28 pt-8">
+        <img src="./images/illustration-thank-you.svg" alt="" class="h-24" />
+      </div>
+      <p
+        class="text-orangeCustom font-overPass font-medium mx-20 text-center mt-12 mb-4 py-2 rounded-full bg-darkBlueCustom"
+        id="innText"
+      >
+        You Selected 4 out of 5
+      </p>
+      <h1 class="text-white font-light font-overPass text-2xl">Thank You!</h1>
+      <p class="text-lightGrayCustom text-sm my-4 mx-14">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don't hesitate to get in touch.
+      </p>
+    </section>
+    <script src="./JS/script.js"></script>
+  </body>
 </html>
